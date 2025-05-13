@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactif</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Quiz Interactif</h1>
+        
+        <div>
+          <form id="quiz-form">
+
+            <div class="question">
+                <p>1. Quelle est la capitale de la France ?</p>
+                <label><input type="radio" name="q1" value="Paris"> Paris</label>
+                <label><input type="radio" name="q1" value="Londres"> Londres</label>
+                <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+            </div>
+
+           <div class="question">
+                <p>2. Quelle est la planete la plus proche de la terre ?</p>
+                <label><input type="radio" name="q2" value="Mercure">Mercure</label>  
+                <label><input type="radio" name="q2" value="Venus"> Venus</label>
+                <label><input type="radio" name="q2" value="Mars"> Mars</label>
+            </div>
+
+            <div class="question">
+                <p>3. Quelle est la plus  grande  planete du systeme solaire ?</p>
+                <label><input type="radio" name="q3" value="Jupiter">Jupiter</label>  
+                <label><input type="radio" name="q3" value="Saturne"> Saturne</label>
+                <label><input type="radio" name="q3" value="Neptune"> Neptune</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz();">Soumettre</button>
+
+          </form>
+          <div id="result"></div>
+       </div>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* Reset CSS */
+/* This is a simple CSS reset to remove default browser styles */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+   
+    background: linear-gradient(135deg, rgb(13, 87, 166) 0%, #00f2fe 100%);
+    color: white;
+    display: flex;     /* Use flexbox for centering */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height:100vh;  /* Center the content  vertically and horizontally */
+}
+/* Container for the form */
+.container{
+
+    background-color: #fff;
+    padding:20px;
+    box-shadow:  0 4px 8px black;
+    border-radius: 8px;
+    width:100%;
+    max-width: 400px; /* Set a maximum width for the form */
+}
+
+.container:hover{
+    transform:scale(1.02);
+}
+
+h1{
+
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+.question{
+
+    margin-bottom: 10px ;
+    font-size: 18px;
+    color: #333;
+}
+
+.question p {
+
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+label{
+
+    display:block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ,transform 0.2s;
+}
+
+label:hover{
+
+    background-color: #e1e1e1;
+    transform: translateY(-2px);
+}
+
+button{
+
+    display: block;
+    width: 100%;
+    padding:10px;
+    background-color: #007BFF;
+    color:#fff;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+button:hover{
+
+    background-color: #0056b3;
+}
+
+#result{
+
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; 
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Make the form responsive */
+        padding: 20px;
+    }
+    h1 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+    .question {
+        font-size: 16px; /* Adjust question size for smaller screens */
+    }
+    button {
+        font-size: 14px; /* Adjust button size for smaller screens */
+    }
+    
+}
+
