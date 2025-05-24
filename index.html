@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Interactif</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Interactif</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<body>
+    <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">Quizéa</div>
-            <div class="user-menu">
-                    <span id="username-display"></span>
-                    <button id="logout-btn">  Se déconnecter </button>
+        <header>
+            <nav class="navbar">
+                <div class="logo">Quizéa</div>
+                <div class="user-menu">
+                        <span id="username-display"></span>
+                        <button id="logout-btn">  Se déconnecter </button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+
+            <h1>Quiz Interactif</h1>
+            <div class="difficulty-selection" style="color: rgb(88, 87, 87);">
+
+                <h3> Choissisez le niveau de difficulte : </h3>  
+                
+                <button class="difficulty-btn" data-level="facile">Facile</button>
+                <button class="difficulty-btn" data-level="moyen">Moyen</button>
+                <button class="difficulty-btn" data-level="difficile">Difficile</button>
+
+           </div>
+
+            <div id="quiz-container" class="hidden"></div>
+
+            <div class="timer-container" id="timer-container" style="display: none;" >
+                <div id="progress-bar"></div>  
             </div>
-        </nav>
-    </header>
+            
+            <div id="result"></div> 
 
-    <div class="container">
-        <h1>Quiz Interactif</h1>
-        <div class="difficulty-selection" style="color: rgb(88, 87, 87);">
-            <h3> Choissisez le niveau de difficulte : </h3>  
-            <button class="difficulty-btn" data-level="facile">Facile</button>
-            <button class="difficulty-btn" data-level="moyen">Moyen</button>
-            <button class="difficulty-btn" data-level="difficile">Difficile</button>
-       </div>
-
-        <div id="quiz-container" class="hidden"></div>
-
-         <div class="timer-container" id="timer-container"  style="display: none;">
-           <div id="progress-bar"></div>
         </div>
-        
 
-        <div id="result"></div> 
+        <script src="scripts.js"></script>
 
-    </div>
-    <script src="scripts.js"></script>
-</body>
+    </body>
+
 </html>
