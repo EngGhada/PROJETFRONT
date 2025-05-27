@@ -11,13 +11,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, rgb(7, 103, 206) 0%, #2a338b 100%);
     color: white;
-    display: flex;     /* Use flexbox for centering */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height:100vh;  /* Center the content  vertically and horizontally */
+    display: flex;     
+    justify-content: center; 
+    align-items: center; 
+    height:100vh;  
 }
 
-/* Container for the form */
+
 .container{
     background-color: #7a7979;
     color: #333;
@@ -82,28 +82,50 @@ body{
         
     }
 
-    @media (max-width: 768px) {
-
+    @media (max-width: 1024px) {
         .container {
-            width: 90%; /* Make the form take up more space on smaller screens */
+            max-width: 90%;
+            padding: 25px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        label, input, button {
+            font-size: 1rem;
+        } 
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 90%; 
             border-radius: 20px; 
         }
-
         h1{
-            font-size: 1.5rem; /* Adjust font size for smaller screens */
+            font-size: 1.5rem;
         }
-
+        label {
+            font-size: 1rem;
+        }
+        input, button {
+            font-size: 0.95rem;
+            padding: 10px;
+        }
     }
 
     @media (max-width: 600px) {
-
-        .container{
-            width: 90%; /* Make the form take up more space on smaller screens */
-        }
-
-        h1{
-            font-size: 1.2rem; /* Adjust font size for smaller screens */
-        }
- 
+        .container {
+        max-width: 95%;
+        padding: 20px;
     }
+    h1 {
+        font-size: 1.2rem;
+    }
+    label {
+        font-size: 0.95rem;
+    }
+    input, button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
 

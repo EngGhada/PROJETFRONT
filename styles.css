@@ -11,10 +11,10 @@ body{
    
     background: linear-gradient(135deg, rgb(13, 87, 166) 0%, #00f2fe 100%);
     color: white;
-    display: flex;     /* Use flexbox for centering */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height:100vh;  /* Center the content  vertically and horizontally */
+    display: flex;     
+    justify-content: center; 
+    align-items: center; 
+    height:100vh;  
 }
 
 .navbar{
@@ -28,7 +28,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 15px;
+     flex-wrap: wrap; /* Important pour éviter le débordement */
     
 }
 
@@ -59,7 +60,6 @@ body{
 }
     
 
-/* Container for the form */
 .container{
 
     background-color: #fff;
@@ -67,7 +67,7 @@ body{
     box-shadow:  0 4px 8px black;
     border-radius: 8px;
     width:100%;
-    max-width: 400px; /* Set a maximum width for the form */
+    max-width: 400px; 
 }
 
 .container:hover{
@@ -256,32 +256,115 @@ button:hover{
     background: #5a2d8c;
 }
 
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .question {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+
+  #result {
+    font-size: 1.1rem;
+    padding: 25px;
+    border-radius: 15px;
+  }
+}
+
 
 @media (max-width: 768px) {
-   #result {
-    font-size: 1 rem; /* Adjust font size for smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
-    border-radius: 6px; /* Adjust border radius for smaller screens */
-    }
-   }
-    
+  .container {
+    width: 95%;
+    padding: 25px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  #result {
+    font-size: 1rem;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
 
 
 @media (max-width: 600px) {
-    .container {
-        width: 90%; /* Make the form responsive */
-        padding: 20px;
-    }
-    h1 {
-        font-size: 20px; /* Adjust heading size for smaller screens */
-    }
-    .question {
-        font-size: 16px; /* Adjust question size for smaller screens */
-    }
-    button {
-        font-size: 14px; /* Adjust button size for smaller screens */
-    }
-    
+  .container {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .question {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #result {
+    font-size: 0.9rem;
+    padding: 15px;
+    border-radius: 8px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .question {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #result {
+    font-size: 0.85rem;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
 }
 
 

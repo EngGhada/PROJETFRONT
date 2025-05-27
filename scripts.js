@@ -16,7 +16,6 @@
 
     try{
      
-     //const response = await fetch("questions.json")
       const response = await fetch(url)
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`); 
@@ -80,8 +79,9 @@
     }
 }
 
- function submitAnswer() {
-    stopTimer()
+
+function submitAnswer() {
+  
     const form = document.getElementById("quiz-form");
     const selectedAnswer = form.answer.value;
 
@@ -91,8 +91,7 @@
         alert("Veuillez sélectionner une réponse.");
         return;
     }
-
-    
+   
  checkAnswer(selectedAnswer)
  currentQuestionIndex++;
  showQuestion();
@@ -116,10 +115,8 @@
 
      displayResult(score, function() {
              handleMessage(score);
-        });
-    
+        });   
 }
-
 
  function updateProgressBar() {
 
@@ -173,7 +170,6 @@ function nextQuestion() {
 
     btn.addEventListener("click", function() {
 
-        //countdown(5)
         const level= btn.getAttribute("data-level")
         loadQuestions(level)
 
